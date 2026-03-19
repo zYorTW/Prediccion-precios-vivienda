@@ -1,3 +1,8 @@
+## Autor
+
+Yorland Insignares Escorcia  
+Analista de Datos / Machine Learning
+
 # Predicción de Precios de Vivienda
 
 Proyecto de análisis de datos para predecir el precio de propiedades inmobiliarias utilizando técnicas de machine learning.
