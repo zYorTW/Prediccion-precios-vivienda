@@ -31,3 +31,22 @@ Desarrollar un modelo capaz de estimar el precio de viviendas en función de sus
 ## Conclusión
 
 El modelo logró explicar el 89% de la variabilidad del precio de viviendas, siendo la calidad general de la propiedad el factor más determinante.
+
+## Análisis Clave
+
+- La variable **OverallQual** tiene la mayor influencia en el precio (~54%)
+- El tamaño habitable (**GrLivArea**) es el segundo factor más relevante
+- Se identificaron y eliminaron outliers que afectaban el rendimiento del modelo
+- La transformación logarítmica mejoró la distribución del precio y el desempeño
+
+## Modelos Evaluados
+
+| Modelo            | R²     | RMSE   |
+|------------------|--------|--------|
+| Regresión Lineal | 0.892  | 0.130  |
+| Random Forest    | 0.858  | 0.149  |
+
+## Decisión
+
+Se seleccionó la **Regresión Lineal** como modelo final debido a su mejor desempeño en métricas.
+
