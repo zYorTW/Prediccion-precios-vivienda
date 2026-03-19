@@ -1,48 +1,36 @@
 ## Autor
 
 Yorland Insignares Escorcia  
-Analista de Datos / Machine Learning
+Analista de Datos / Machine Learning  
 
 # Predicción de Precios de Vivienda
 
-Proyecto de análisis de datos para predecir el precio de propiedades inmobiliarias utilizando técnicas de machine learning.
+Modelo de machine learning para estimar el precio de propiedades inmobiliarias a partir de variables estructurales y de calidad.
 
-## Objetivo del proyecto
-Desarrollar un modelo capaz de estimar el precio de viviendas en función de sus características estructurales.
+## Objetivo
+
+Desarrollar un modelo capaz de predecir el precio de viviendas y analizar los factores que más influyen en su valor.
 
 ## Proceso
 
-- Análisis exploratorio de datos (EDA)
-- Limpieza y preprocesamiento
-- Transformación logarítmica del precio
-- Entrenamiento de modelos (Regresión Lineal y Random Forest)
-- Evaluación con métricas (RMSE y R²)
+- Análisis exploratorio de datos (EDA) para identificar patrones y correlaciones
+- Limpieza y preprocesamiento de datos (manejo de nulos y outliers)
+- Transformación logarítmica de la variable objetivo para mejorar la distribución
+- Codificación de variables categóricas mediante one-hot encoding
+- Entrenamiento y evaluación de modelos de regresión
 
 ## Resultados
 
-- R²: 0.89 (Regresión Lineal)
-- RMSE: 0.13
-- Variable más influyente: OverallQual (~54%)
-
-## Tecnologías
-
-- Python
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
-- seaborn
-
-## Conclusión
-
-El modelo logró explicar el 89% de la variabilidad del precio de viviendas, siendo la calidad general de la propiedad el factor más determinante.
+- **R²:** 0.892 (Regresión Lineal)
+- **RMSE:** 0.130 (escala logarítmica)
+- **Variable más influyente:** OverallQual (~54%)
 
 ## Análisis Clave
 
-- La variable **OverallQual** tiene la mayor influencia en el precio (~54%)
-- El tamaño habitable (**GrLivArea**) es el segundo factor más relevante
-- Se identificaron y eliminaron outliers que afectaban el rendimiento del modelo
-- La transformación logarítmica mejoró la distribución del precio y el desempeño
+- **OverallQual** es el factor más determinante en el precio de la vivienda  
+- **GrLivArea** (área habitable) presenta alta correlación positiva  
+- La eliminación de outliers mejoró la estabilidad del modelo  
+- La transformación logarítmica redujo el sesgo en la variable objetivo  
 
 ## Modelos Evaluados
 
@@ -53,5 +41,17 @@ El modelo logró explicar el 89% de la variabilidad del precio de viviendas, sie
 
 ## Decisión
 
-Se seleccionó la **Regresión Lineal** como modelo final debido a su mejor desempeño en métricas.
+La regresión lineal presentó mejor desempeño que Random Forest, lo que sugiere que las relaciones entre las variables son mayormente lineales en este conjunto de datos.
 
+## Tecnologías
+
+- Python  
+- pandas  
+- numpy  
+- scikit-learn  
+- matplotlib  
+- seaborn  
+
+## Conclusión
+
+El modelo logró explicar aproximadamente el 89% de la variabilidad del precio de las viviendas, demostrando que factores como la calidad general y el tamaño de la propiedad son determinantes clave en la predicción.
